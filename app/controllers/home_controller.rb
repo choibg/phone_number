@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def list
+  	@numbers=Number.all
   end
 
   def add
@@ -9,7 +10,6 @@ class HomeController < ApplicationController
   	n=Number.new
   	n.name=params[:phone_user]
   	n.phone_number=params[:phone_number]
-  	n.save 
-  	
+  	n.save 	
   end
 end
